@@ -14,7 +14,7 @@
   flex-direction: column;
   transform: translateY(1rem);
 
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0.5rem 0;
 }
