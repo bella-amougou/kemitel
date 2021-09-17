@@ -1,148 +1,212 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-:root {
-  font-size: 10px;
-  --dancing: "Dancing Script", cursive;
-  --kara: "Karantina", cursive;
-  --nuni: "Nunito", sans-serif;
-  --open: "Open Sans Condensed", sans-serif;
-}
-.gray {
-  color: #ada7a4;
-}
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 1.8rem;
-  font-family: var(--nuni);
-  height: 100vh;
-}
-h2 {
-  font-family: var(--dancing);
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.4rem;
-}
-a {
-  text-decoration: none;
-  letter-spacing: 0.1rem;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-family: var(--kara);
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 0.7rem;
-}
-p {
-  font-family: var(--open);
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-}
-input {
-  font-family: var(--nuni);
-}
-.container {
-  max-width: 600px;
-  margin: 3rem auto;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-10rem);
-  padding: 1rem 0;
-}
-.form-container {
-  max-width: 400px;
-  width: 360px;
-}
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-span {
-  display: inline-block;
-  background: #2675b3;
-  color: white;
-  padding: 0.3rem;
-  border-radius: 0.7rem;
-}
-input {
-  height: 40px;
-  margin-bottom: 0.8rem;
-  border: 0;
-  outline: 0;
-  border: 1px solid#333;
-  padding: 1rem;
+:root{
+    font-size: 10px;
+    --green:#48ad09;
+    --gray:#f2f2f2;
 }
 
-button[type="submit"] {
-  border: 0;
-  background: #2675b3;
-  color: white;
-  border: 1px solid #2675b3;
-  font-size: 1.7rem;
-  height: 40px;
-  margin-bottom: 0.8rem;
-  border: 0;
-  outline: 0;
-  padding: 1rem;
+/*Utility*/
+ul{
+    list-style: none;
 }
-input:last-child {
-  background: #2675b3 !important;
+a{
+    text-decoration: none;
+    
 }
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+
+h1,h2,h3{
+    margin-bottom: 1.3rem;
 }
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+
+body{
+    color: #333;
+    font-size: 1.5rem;
 }
-a {
-  color: #2675b3;
-  font-weight: bold;
-  font-size: 1.7rem;
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
 }
-/* Change autocomplete styles in WebKit */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid #2675b3;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  -webkit-text-fill-color: black;
+.green{
+    color: white;
+    background: var(--green);
+    padding: 1rem 2rem;
+
 }
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-select:focus,
-textarea {
-  font-size: 1.6rem;
+p{
+    margin-bottom: 1rem;
+}
+/*NAv*/
+nav{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    line-height: 3rem;
+    background: var(--gray);
+    justify-content: center;
+    align-content: center;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: white;
+
+
+}
+nav h2{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    
+    
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    margin-right: 2rem;
+}
+ul li a{
+    font-size: 1.5rem;
+    color: #333;
+}
+nav h2 span{
+    color: var(--green);
+}
+
+/*Main*/
+
+main {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(8px 8px 10px gray);
+    -webkit-filter: drop-shadow(8px 8px 10px gray);
+
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    color: #333;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: url('../images/pexels-pixabay-38544.jpg')no-repeat center center/cover;
+   
+}
+main span{
+    color: var(--green);
+    text-align: center;
+}
+
+main p{
+    text-align: center;
+    font-size: 300;
+    color: #333;
+}
+.text h1{
+    font-size: 5rem;
+}
+.text p{
+    font-size: 2rem;
+}
+
+/*Friend*/
+.friend{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem ;
+
+}
+.friend h3{
+    color: var(--green);
+}
+
+.what{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+.w{
+    color: #444;
+    font-size: 2rem;
+    margin-bottom:4.5rem;
+    margin-top: 2rem;
+}
+.what h2{
+
+    margin-bottom: 3rem;
+}
+.spe{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.5rem;
+    margin-bottom: 4.5rem;
+ 
+}
+.spec h3{
+    text-align: center;
+}
+.spec{
+    margin: 1rem;
+    padding: 1.8rem 1.4rem;
+    border: 1px solid var(--gray);
+    transition: .7s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+.spec:hover{
+    background: var(--gray);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+.spec p{
+    line-height: 2rem;
+    letter-spacing: .7px;
+}
+.spec a{
+    color: #333;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+.spec:first-child a{
+    color: var(--green);
+}
+.spec a:hover{
+    color: var(--green);
 }
