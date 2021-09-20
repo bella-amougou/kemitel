@@ -1,6 +1,6 @@
 .container {
   margin-top: 2.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   transform: translateY(0);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
